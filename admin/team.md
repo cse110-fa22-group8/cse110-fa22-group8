@@ -29,6 +29,16 @@ I'm a third-year computer engineering major at UC San Diego. I love listening to
 
 ---
 
+<img src="photos/BrianM.jpg" align="left" width="" height="250">
+
+**Brian Mendez** - *Team Lead*
+
+Socials: [Github](https://github.com/b1mendez) / [LinkedIn](https://www.linkedin.com/in/brian-mendez-2530801b0/)
+
+I'm a fourth-year transfer student majoring in computer engineering major at UC San Diego. I was a tutor for over two years and recently launched an online tutoring company called Better Times Tutoring that specializes in STEM subjects from middle school to high school. I have experience with front end development, website design, and social media marketing strategies. I also play the guitar and engage in recreational fishing on my yearly trips to Jalisco Mexico. 
+
+---
+
 <img src="photos/Goldie.jpeg" align="left" width="" height="200">
 
 **Goldie (Shengqiu) Jin** - *Designer*
@@ -38,7 +48,6 @@ Socials: [Github](https://github.com/sjin799) / [LinkedIn](https://www.linkedin.
  I'm a third-year computer engineering major at UC San Diego. I love to draw and watch movies and animes. I have hold 2 graphic design positions for different student organizations. I am experience in Figma and Canva for illustration/UI design and. I will be doing a software engineering co-op with Collins Aerospace for next winter and spring to develope new feature on estimating landing distance on airplane. 
 
 ---
-
 
 <img src="photos/alex.png" align="left" width="200" height="200">
 
@@ -59,6 +68,7 @@ Socials: [Github](https://github.com/demimao) / [LinkedIn](https://www.linkedin.
 I'm a third-year math-cs major at UC San Diego. I love watching fantasy movies, chilling out by the sea and exploring new restaurants. I'm one of the agile devs for the team and I look forward to working collaboratively with designer, front-end and back-end devs. I'm an officer at the UCSD Chinese Engineering Society, holding events such as intern mixer and data mining competition. Next quarter, I might work as a math contents tutor at the Teaching + Learning Commons at Geisel.
 
 ---
+
 <img src="photos/Rishi.jpg" align="left" width="150" height="200">
 
 **Rishigesh Jayananth** - *Front End Developer*
