@@ -5,7 +5,8 @@
 describe('Create account test cases', () => {
 
     // Declare constant that we will use repeatedly
-    const localhost = "http://127.0.0.1:5500";
+    const localhost = 'file://' + process.cwd() + '/source/main/create_account/create_account.html';
+    const loginUrl = 'file://'+ process.cwd() + '/source/main/login_page/login_page.html'
     const userNameSelect = "div.create_account_form input[name='username']";
     const userPassSelect = "div.create_account_form input[name='password']";
     const userPassRepeat = "div.create_account_form input[name='repeat_password']";
@@ -13,8 +14,8 @@ describe('Create account test cases', () => {
     var alertMsg;
     // go to webpage
     beforeAll(async () => {
-      await page.goto('http://127.0.0.1:5500/source/main/login_page/login_page.html');
-      await page.goto('http://127.0.0.1:5500/source/main/create_account/create_account.html');
+      await page.goto(loginUrl);
+      await page.goto(localhost);
     });
   
     // Check to make sure that create account page have loaded
@@ -109,7 +110,7 @@ describe('Create account test cases', () => {
     // Check username has not been created before
     it('testing if username already exists',async ()=> {
 
-        await page.goto('http://127.0.0.1:5500/source/main/create_account/create_account.html');
+        await page.goto(localhost);
         
         await page.type(userNameSelect, "puppeteer_here");
         await page.type(userPassSelect, "Password123");
@@ -133,7 +134,7 @@ describe('Create account test cases', () => {
         const url = await page.url();
         // let currentUrl =  await page.evaluate(() => {window.location.href});
 
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        expect(url).toBe("");
         // Clear local storage
         await page.evaluate(()=>{
             window.localStorage.clear();

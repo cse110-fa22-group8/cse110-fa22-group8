@@ -1,5 +1,5 @@
 
-const homePageUrl = "http://127.0.0.1:5500/source/main/home_page/home_page.html";
+const homePageUrl = 'file://' + process.cwd() + '/source/main/login_page/login_page.html';
 const localhost = "http://127.0.0.1:5500";
 const username = "puppeteer_here"
 const password = "Password123";
@@ -12,7 +12,7 @@ const expenseSelect= "input[id='name']";
 describe ('Test cases for the home page',()=>{
 
     beforeAll(async () => {
-        await page.goto(localhost + '/source/main/login_page/login_page.html'),
+        await page.goto(homePageUrl),
         {waitUntil: ["networkidle0", "domcontentloaded"]};
     });  
 

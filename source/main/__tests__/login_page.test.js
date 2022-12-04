@@ -2,13 +2,16 @@
 
 describe('login page test cases', () => {
     // Define localhost, username and password variables
-    const localhost = "http://127.0.0.1:5500", username = "puppeteer_here", password = "Password123";
+    const localhost = 'file://' + process.cwd() + '/source/main/create_account/create_account.html';
+    const loginUrl = 'file://' + process.cwd() + '/source/main/login_page/login_page.html';;
+    const homePageUrl ='file://'+ process.cwd() + '/source/main/home_page/home_page.html'
+    const username = "puppeteer_here", password = "Password123";
     const userNameSelect = "div.login_cred input[id='username']";
     const userPassSelect = "div.login_cred input[id='password']";
 
     // go to webpage
     beforeAll(async () => {
-      await page.goto(localhost + '/source/main/login_page/login_page.html');
+      await page.goto(loginUrl);
     });   
     // Check to make sure that login page have loaded
     it('Login page reached', async () => {
@@ -39,7 +42,7 @@ describe('login page test cases', () => {
         ]);
         const url = await page.url();
         // console.log(url);
-        expect(url).toBe(localhost + "/source/main/create_account/create_account.html");
+        expect(url).toBe(localhost);
     });
 
     // Check blank username is not able to access home page (unsuccesfull login)
@@ -54,7 +57,7 @@ describe('login page test cases', () => {
         // check page url doesn't change
         const url = await page.url();
         // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        expect(url).toBe(loginUrl);
         
     });
     
@@ -68,7 +71,7 @@ describe('login page test cases', () => {
         // check page url doesn't change
         const url = await page.url();
         // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        expect(url).toBe(loginUrl);
         
     });
 
@@ -113,7 +116,7 @@ describe('login page test cases', () => {
         const url = await page.url();
         
         // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/home_page/home_page.html");
+        expect(url).toBe(homePageUrl);
 
         // Clear the localstorage
         await page.evaluate(()=>{
