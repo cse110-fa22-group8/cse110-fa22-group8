@@ -3,10 +3,10 @@ name: Tests
 on: 
   push: 
     branches: 
-      - home-page
+      - "home-page"
   pull_request:
     branches: 
-      - home-page
+      - "home-page"
 
 jobs:
   tests:
