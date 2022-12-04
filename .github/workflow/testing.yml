@@ -1,6 +1,10 @@
 name: Tests
 
-on: [pull_request, push]
+on: 
+  push: 
+    branches: ["home-page"]
+  pull_request:
+    branches: ["home-page"]
 
 jobs:
   tests:
