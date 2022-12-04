@@ -2,9 +2,11 @@ name: Tests
 
 on: 
   push: 
-    branches: ["home-page"]
+    branches: 
+      - home-page
   pull_request:
-    branches: ["home-page"]
+    branches: 
+      - home-page
 
 jobs:
   tests:
