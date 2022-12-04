@@ -76,41 +76,77 @@
     width: fit-content;
     border: none;
     background-color: transparent;
-    font-size: 2em;
+    font-size: 2.5em;
     cursor: pointer;
   }
 
-  .form-container {
-    display: flex;
-    flex-direction: column;
-  }
+ 
 
   .close-button {
     position:absolute;
     top: 2%;
-    right: 6%;
+    right: 5%;
     width: fit-content;
     border: none;
     background-color: transparent;
-    font-size: 2em;
+    font-size: 2.5em;
     cursor: pointer;
+    color:white;
   }
 
-  .form-container label {
-    margin-bottom: 5px;
+  .close-button:hover { 
+    transform: scale(1.2);
   }
+  .form-container {
+    display:flex;
+    flex-direction: column;
+  }
+
+  
 
   .form-container input, select {
-    margin-bottom: 10px;
+    border-width: 0px 0px 2px 0;
+    border-bottom: 1px solid #2E8BC0;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right:20px;
+    color:white;
+    outline: none;
+  } 
+
+  #category option{
+    color: black;
+    outline: none;
   }
+
+  
+
+  input::-webkit-input-placeholder {
+    color: white;
+  }
+
+  input:focus::placeholder{
+  color: transparent;
+  transition-duration: 0.4s;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
   .button-wrapper {
-    text-align: right;
+    text-align: center;
   }
+
   .addBtn {
     margin-top: 4%;
     width: fit-content;
     cursor: pointer;
-    padding: 3px;
+    font-size: 17px;
+    padding: 4px;
   }
 
   .delBtn {
