@@ -133,8 +133,9 @@ describe('Create account test cases', () => {
 
         const url = await page.url();
         // let currentUrl =  await page.evaluate(() => {window.location.href});
-
-        expect(url).toBe("");
+        let substring = "cse110-fa22-group8/source/main/login_page/login_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
         // Clear local storage
         await page.evaluate(()=>{
             window.localStorage.clear();
