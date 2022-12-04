@@ -3,9 +3,11 @@ name: Tests
 on: 
   push: 
     branches: 
+      - main
       - "home-page"
   pull_request:
     branches: 
+      - main
       - "home-page"
 
 jobs:
