@@ -1,7 +1,8 @@
 
-const homePageUrl = "http://127.0.0.1:5500/source/main/home_page/home_page.html";
-const localhost = "http://127.0.0.1:5500";
-const username = "puppeteer_here"
+const homePageUrl = 'file://' + process.cwd() + '/source/main/home_page/home_page.html';
+// const localhost = "http://127.0.0.1:5500";
+const loginPageUrl = 'file://' + process.cwd() + '/source/main/login_page/login_page.html';
+const username = "puppeteer_here";
 const password = "Password123";
 const userNameSelect = "div.login_cred input[id='username']";
 const userPassSelect = "div.login_cred input[id='password']";
@@ -12,7 +13,7 @@ const expenseSelect= "input[id='name']";
 describe ('Test cases for the home page',()=>{
 
     beforeAll(async () => {
-        await page.goto(localhost + '/source/main/login_page/login_page.html'),
+        await page.goto(loginPageUrl),
         {waitUntil: ["networkidle0", "domcontentloaded"]};
     });  
 
@@ -48,7 +49,9 @@ describe ('Test cases for the home page',()=>{
         await page.waitForNavigation();
 
         const url = await page.url();
-        expect(url).toBe(localhost + "/source/main/home_page/home_page.html");
+        let substring = "cse110-fa22-group8/source/main/home_page/home_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
     });
     
     // creating an expense 
@@ -239,8 +242,9 @@ describe ('Test cases for the home page',()=>{
         await button.click();
         await page.waitForNavigation();
         const url = await page.url();
-        
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        let substring = "cse110-fa22-group8/source/main/login_page/login_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
     });
     
     // reading (for now we test that expense stays when logging out)
@@ -267,8 +271,10 @@ describe ('Test cases for the home page',()=>{
         await button.click();
         await page.waitForNavigation();
 
-        await page.goto(localhost +"/source/main/home_page/home_page.html",
+        await page.goto(homePageUrl,
         { waitUntil: ["networkidle0", "domcontentloaded"]});
+        const url = await page.url();
+        console.log(url);
         expect(alertMsg).toBe("Unauthenticated User... Plz Login");
 
         // Clear local storage

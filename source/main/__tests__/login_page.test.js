@@ -2,13 +2,16 @@
 
 describe('login page test cases', () => {
     // Define localhost, username and password variables
-    const localhost = "http://127.0.0.1:5500", username = "puppeteer_here", password = "Password123";
+    const localhost = 'file://' + process.cwd() + '/source/main/create_account/create_account.html';
+    const loginUrl = 'file://' + process.cwd() + '/source/main/login_page/login_page.html';;
+    const homePageUrl ='file://'+ process.cwd() + '/source/main/home_page/home_page.html'
+    const username = "puppeteer_here", password = "Password123";
     const userNameSelect = "div.login_cred input[id='username']";
     const userPassSelect = "div.login_cred input[id='password']";
 
     // go to webpage
     beforeAll(async () => {
-      await page.goto(localhost + '/source/main/login_page/login_page.html');
+      await page.goto(loginUrl);
     });   
     // Check to make sure that login page have loaded
     it('Login page reached', async () => {
@@ -38,14 +41,16 @@ describe('login page test cases', () => {
             page.click('#signup'),
         ]);
         const url = await page.url();
+        let substring = "cse110-fa22-group8/source/main/create_account/create_account.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
         // console.log(url);
-        expect(url).toBe(localhost + "/source/main/create_account/create_account.html");
+        // expect(url).toBe(localhost);
     });
 
     // Check blank username is not able to access home page (unsuccesfull login)
     it('testing for blank username',async ()=>{
-        await page.goto(localhost + '/source/main/login_page/login_page.html'
-        ,{waitUntil: ["networkidle0", "domcontentloaded"]});
+        await page.goto(loginUrl,{waitUntil: ["networkidle0", "domcontentloaded"]});
         // await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"]});
         await page.type(userNameSelect, "");
         await page.type(userPassSelect, password);
@@ -53,8 +58,11 @@ describe('login page test cases', () => {
         await button.click();
         // check page url doesn't change
         const url = await page.url();
+        let substring = "cse110-fa22-group8/source/main/login_page/login_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
         // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        // expect(url).toBe(loginUrl);
         
     });
     
@@ -67,8 +75,11 @@ describe('login page test cases', () => {
         await button.click();
         // check page url doesn't change
         const url = await page.url();
+        let substring = "cse110-fa22-group8/source/main/login_page/login_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
         // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/login_page/login_page.html");
+        // expect(url).toBe(loginUrl);
         
     });
 
@@ -97,6 +108,7 @@ describe('login page test cases', () => {
         expect(alertMsg).toBe("Account under IamnotReal does not exist.");
 
     });
+    
     // Check if valid username and password would successfully login
     it("testing sucessful login", async() => {
         // Enter the username and password
@@ -111,9 +123,9 @@ describe('login page test cases', () => {
         await page.waitForNavigation();
 
         const url = await page.url();
-        
-        // let currentUrl =  await page.evaluate(() => {window.location.href}); e.log(url);
-        expect(url).toBe(localhost + "/source/main/home_page/home_page.html");
+        let substring = "cse110-fa22-group8/source/main/home_page/home_page.html";
+        let contains = url.includes(substring);
+        expect(contains).toBe(true);
 
         // Clear the localstorage
         await page.evaluate(()=>{
