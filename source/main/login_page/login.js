@@ -10,6 +10,8 @@ submit.addEventListener("click", check);
 //checking
 /**
  * 
+ * This function validates the login of a user's account.
+ * 
  * @returns Nothing if successful, and reroutes to home page
  * else, displays an alert that says the user does not exist.
  */

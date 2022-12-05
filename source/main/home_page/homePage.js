@@ -25,12 +25,12 @@ a.addEventListener('change', function() {
     searchfilter(search.value, a.value);
 }, false);
 /**
- * 
- * @param {*} searchVal 
- * @param {*} filterVal 
- * 
  * Join function that gets fired when either search or filter is being used
  * Takes both values of search and filter to searchfilter the html table
+ * 
+ * @param {string} searchVal The query term the user inputs
+ * @param {string} filterVal The filter term the user inputs
+ * 
  */
 function searchfilter(searchVal, filterVal){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
@@ -61,20 +61,35 @@ function searchfilter(searchVal, filterVal){
 
 finalValue = []
 
+/**
+ * This function will open the add expense UI element
+ */
 function openForm() {
     document.getElementById("expense").style.display = "block";
 }
+/**
+ * This function will close the add expense UI element
+ */
 function closeForm() {
     document.getElementById("expense").style.display = "none";
 }
 
+/**
+ * This function will open the update expense UI element
+ */
 function openUpdate() {
     document.getElementById("update").style.display = "block";
 }
+/**
+ * This function will close the update expense UI element
+ */
 function closeUpdate() {
     document.getElementById("update").style.display = "none";
 }
 
+/**
+ * This function will open the Chart UI element and render the chart based on data it pulls from the localStorage database
+ */
 function openChart(){
     document.getElementById("breakdown").style.display = "block";
     var xValues = ["Needs", "Wants", "Savings"];
@@ -123,16 +138,21 @@ function openChart(){
     });
 }
 
+/**
+ * This function will close the chart UI element
+ */
 function closeChart() {
     document.getElementById("breakdown").style.display = "none";
 }
 
 /**
  * 
- * @param {*} name 
- * @param {*} category 
- * @param {*} amount 
- * @param {*} date 
+ * This function will validate the input of an expense on the criteria that all the fields are not empty.
+ * 
+ * @param {string} name Name of the expense
+ * @param {string} category Category of the expense
+ * @param {string} amount Amount for the expense
+ * @param {string} date Date of the expense
  * @returns True or false depending on if the input is valid (whether it exists)
  */
 const validateInput = (name, category, amount, date) => {
@@ -176,7 +196,17 @@ document.querySelector("#chart").addEventListener("click", () => {
     // Open form item
     openChart();
 });
-    
+
+
+/**
+ * 
+ * This function will add a row in the database and the table UI with the expense that a user has submitted.
+ * 
+ * @param {sring} expenseName The name of the expense the user entered
+ * @param {string} expenseCategory The category of the expense the user entered
+ * @param {string} expenseAmount The amount of the expense the user entered
+ * @param {string} expenseDate The date of the expense the user entered
+ */
 const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
     //creates a new row element
     let row = document.createElement("tr");
@@ -242,7 +272,12 @@ const addRow = (expenseName, expenseCategory, expenseAmount, expenseDate) => {
     localStorage.setItem(user, JSON.stringify(finalValue))
 
 };
-    
+  
+/**
+ * This function will edit the row that the user wants to update an expense for.
+ * 
+ * @param {object} row The current row that the user is editing
+ */
 function editRow(row){
     openUpdate();
     document.getElementById("name_update").value = JSON.parse(localStorage.getItem(user))[row.rowIndex-1].name
@@ -307,12 +342,17 @@ function editRow(row){
     
 }
 
+
 function deleteRow(){
 
 }
 
 let logout = document.getElementById('logout');
 logout.addEventListener('click', logoutAction)
+/**
+ * This function will restrict the ability to use the back button and log the user out, and clear sessionStorage to indicate
+ * the end of the current session.
+ */
 function logoutAction() {
     // alert('logout button was clicked');
     event.preventDefault();
