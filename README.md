@@ -21,4 +21,6 @@ To see the live project, visit [Frugal](source/main/login_page/login_page.html).
   - You will have the ability to edit or delete each expense by clicking on the three horizontal dots to the right of the expense row. 
 - To view your expense breakdown, click the pie chart next to the "add expense button".
   - A pop up form breaking down your expense via a pie chart will be shown on your screen. 
+- Using the search bar feature, you can search for a specific expense by typing your expense name in the search bar. 
+- You can also filter out expense categories to calculate how much was spent in each category. 
 - All your information will be stored onto your local storage and associated with your username.
