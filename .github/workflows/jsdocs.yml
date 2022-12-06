@@ -26,11 +26,11 @@ jobs:
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./source
-          recurse: true
-          output_dir: ./out
+          recurse: true #search all folders to gen docs
+          output_dir: ./out #out put to virtual machine folder called out 
           
       - name: commit to repo
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: JSDocuments # The branch the action should deploy to.
-          folder: ./docs # The folder the action sho uld deploy.
+          folder: ./out # The folder the action should deploy.
