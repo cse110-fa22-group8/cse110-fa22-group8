@@ -9,7 +9,7 @@ stay financially responsible. Unlike many other expense trackers, our expense tr
 - Categorized Expenses for organized displays
 - Expense Breakdowns categorizing the expense from needs, wants, and savings
 
-To see the live project, visit [Frugal](source/main/login_page/login_page.html).
+To see the live project, visit [Frugal](https://cse110-fa22-group8.github.io/cse110-fa22-group8/source/main/login_page/login_page.html).
 - [Private Video]()
 - [Public Video]()
 
