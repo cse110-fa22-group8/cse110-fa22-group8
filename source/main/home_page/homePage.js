@@ -79,7 +79,6 @@ finalValue = []
  */
 function openForm() {
     document.getElementById("expense").style.display = "block";
-    document.getElementById("cover").style.backgroundColor = "black"
 }
 /**
  * This function will close the add expense UI element
