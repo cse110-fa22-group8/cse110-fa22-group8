@@ -25,6 +25,11 @@
     margin-left: 5px;
   }
 
+  #chart{
+    transform: translateY(5px);
+    margin-left: 15px;
+  }
+
   .form-popup {
     position: absolute;
     max-height: 90vh;
