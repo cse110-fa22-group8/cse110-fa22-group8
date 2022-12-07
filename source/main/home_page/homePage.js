@@ -36,14 +36,27 @@ function searchfilter(searchVal, filterVal){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
     for(let i=1; i< rows.length; i++){
         rows[i].style.display = 'table-row';
+        rows[i].style.backdropFilter = 'none'
+        rows[i].style.borderRadius = '0px'
     }
+    let count = 0;
     for(let i=1; i< rows.length; i++){
         if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(searchVal)){
             if(rows[i].getElementsByTagName('td')[1].innerHTML == filterVal){
                 rows[i].style.display = 'table-row';
+                if(count % 2 == 1){
+                    rows[i].style.backdropFilter = 'blur(3px) saturate(100%) contrast(45%) brightness(130%)'
+                    rows[i].style.borderRadius = '10px'
+                }
+                count++
             } 
             else if (filterVal == "" || filterVal == "All"){
                 rows[i].style.display = 'table-row';
+                if(count % 2 == 1){
+                    rows[i].style.backdropFilter = 'blur(3px) saturate(100%) contrast(45%) brightness(130%)'
+                    rows[i].style.borderRadius = '10px'
+                }
+                count++
             }
             else{
                 rows[i].style.display = 'none';
@@ -66,12 +79,17 @@ finalValue = []
  */
 function openForm() {
     document.getElementById("expense").style.display = "block";
+    document.getElementById("cover").style.backgroundColor = "black"
 }
 /**
  * This function will close the add expense UI element
  */
 function closeForm() {
     document.getElementById("expense").style.display = "none";
+    document.getElementById("name").value = '';
+    document.getElementById("category").value = '';
+    document.getElementById("amount").value = '';
+    document.getElementById("date").value = '';
 }
 
 /**
@@ -124,8 +142,11 @@ function openChart(){
     },
     options: {
         title: {
-        display: true,
-        text: "Expense Breakdown" 
+            display: true,
+            text: "Expense Breakdown", 
+            fontSize: 25,
+            fontFamily: "Montserrat",
+            fontColor: "white"
         },
         tooltips: {
             callbacks: {
@@ -133,7 +154,7 @@ function openChart(){
                 return data['labels'][tooltipItem['index']] + ': $' + data['datasets'][0]['data'][tooltipItem['index']];
               }
             }
-          }
+        }
     }
     });
 }
