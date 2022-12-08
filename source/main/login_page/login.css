@@ -106,32 +106,25 @@ form .login_cred {
   width: 100%;
 }
 .pass{
-  margin: -5px 0 20px;
+  margin-left: 13%;
+  margin-bottom: 20px;
   color: #e6e6e6;
   cursor: pointer;
   display:inline-block;
+}
 
-  
-}
-.pass a[href="../reset_password/reset_password.html"] {
-  color: white;
-  text-decoration: none;
-}
 .pass a[href="../create_account/create_account.html"] {
-  padding-left: 100px;
-  color: white;
-  text-decoration: none;
-}
-
-.pass:hover {
-  text-decoration: none;
+  padding-left: 2px;
+  color: #e6e6e6;
+  text-decoration: underline;
+  font-size: 15px;
 }
 
 input[type="submit"] {
   width: 100%; 
   height: 40px;
   margin-top: 3%;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
   border-radius: 10px;
   border-style: none;
   outline: none;
@@ -143,16 +136,5 @@ input[type="submit"] {
 input[type="submit"]:hover { 
   transform: scale(1.05);
 }
-.signup_link {
-  margin: 30px 0;
-  text-align: center;
-  font-size: 18px;
-  color: #666666;
-}
-.signup_link a {
-  color: #0f72b3;
-  text-decoration: none;
-}
-.signup_link a:hover {
-  text-decoration: underline;
-}
+
+
