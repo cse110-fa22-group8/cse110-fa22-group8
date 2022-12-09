@@ -10,7 +10,7 @@ stay financially responsible. Unlike many other expense trackers, our expense tr
 - Expense Breakdowns categorizing the expense from needs, wants, and savings
 
 To see the live project, visit [Frugal](https://cse110-fa22-group8.github.io/cse110-fa22-group8/source/main/login_page/login_page.html).
-- [Private Video]()
+- [Private Video](https://www.youtube.com/watch?v=JglN2eMawa4)
 - [Public Video]()
 
 ## Tutorial 
@@ -24,3 +24,21 @@ To see the live project, visit [Frugal](https://cse110-fa22-group8.github.io/cse
 - Using the search bar feature, you can search for a specific expense by typing your expense name in the search bar. 
 - You can also filter out expense categories to calculate how much was spent in each category. 
 - All your information will be stored onto your local storage and associated with your username.
+
+## Source Documentation (JSDocs)
+
+[JS Documentation](https://dolphin-app-cfpne.ondigitalocean.app/)
+
+JSDocs for main are automatically generated to the link above or [here](https://dolphin-app-cfpne.ondigitalocean.app/).
+
+## Testing
+
+
+- To run unit tests, run Jest in the project directory:
+```
+$ npm run test
+```
+
+
+## Linting & Validation
+To check javascript linting using eslint, run:
