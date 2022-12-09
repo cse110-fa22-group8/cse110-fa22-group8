@@ -32,6 +32,7 @@ body {
 }
 
 .form-popup {
+  position: absolute;
   max-height: 90vh;
   max-width: fit-content;
   min-height: fit-content;
@@ -39,14 +40,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
+  border-width: 1px;
+  border-color: #fff;
   border-radius: 15px;
+  border-style: solid;
   box-shadow: 0 0 1rem 0 rgba(0 0 0 / 20%);
   padding: 3% 3% 2%;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 1500; 
 }
 
 #chart-close {
@@ -290,7 +289,7 @@ h1 {
   width: 100%;
 }
 
-.sorting-search {
+.sorting-search{
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
@@ -310,8 +309,17 @@ h1 {
   outline: none;
 }
 
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 1500; 
+}
+
 #logout {
-  width: 80px;
+  width: 80px; 
   height: 35px;
   margin-left: 10px;
   border-radius: 10px;
@@ -349,6 +357,7 @@ h1 {
   bottom: 0;
   width: fit-content;
   height: 30%;
+  
 }
 
 #bottom {
