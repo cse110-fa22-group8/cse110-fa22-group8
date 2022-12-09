@@ -1,177 +1,167 @@
-/* Include the padding and border in an element's total width and height */
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: 500;
-    font-family: 'Montserrat';
-  }
+@import "https://fonts.googleapis.com/css?family=Montserrat";
 
-  body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: url("../assets/images/Main\ Page.png") bottom fixed;
-    background-size: relative;
-    margin-right: 1%;
-    margin-left: 1%;
-    margin-top: 1%;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
 
-  #add-row {
-    margin-top: 1%;
-    margin-left: 5px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: url("../assets/images/Main\ Page.png") bottom fixed;
+  background-size: relative;
+  margin-right: 1%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
 
-  #chart{
-    transform: translateY(5px);
-    margin-left: 15px;
-  }
+#add-row {
+  margin-top: 1%;
+  margin-left: 5px;
+}
 
-  .form-popup {
-    position: absolute;
-    max-height: 90vh;
-    max-width: fit-content;
-    min-height: fit-content;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);    
-    border-width: 1px;
-    border-color: #fff;
-    border-radius: 15px;
-    border-style: solid;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-    padding-top: 3%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
+#chart{
+  transform: translateY(5px);
+  margin-left: 15px;
+}
 
-  #chart-close {
-    position:absolute;
-    top: 2%;
-    right: 3%;
-    width: fit-content;
-    border: none;
-    background-color: transparent;
-    font-size: 2.5em;
-    cursor: pointer;
-  }
+.form-popup {
+  position: absolute;
+  max-height: 90vh;
+  max-width: fit-content;
+  min-height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 15px;
+  border-style: solid;
+  box-shadow: 0 0 1rem 0 rgba(0 0 0 / 20%);
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
 
- 
+#chart-close {
+  position:absolute;
+  top: 2%;
+  right: 3%;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  font-size: 2.5em;
+  cursor: pointer;
+}
 
-  .close-button {
-    position:absolute;
-    top: 2%;
-    right: 5%;
-    width: fit-content;
-    border: none;
-    background-color: transparent;
-    font-size: 2.5em;
-    cursor: pointer;
-    color:white;
-  }
+.close-button {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  font-size: 2.5em;
+  cursor: pointer;
+  color: white;
+}
 
-  .close-button:hover { 
-    transform: scale(1.2);
-  }
-  .form-container {
-    display:flex;
-    flex-direction: column;
-  }
+.close-button:hover { 
+  transform: scale(1.2);
+}
 
-  
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
 
-  .form-container input, select {
-    border-width: 0px 0px 2px 0;
-    border-bottom: 1.5px solid #2E8BC0;
-    background-color: transparent;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right:20px;
-    color:white;
-    outline: none;
-  } 
+.form-container input, select {
+  border-width: 0px 0px 2px 0;
+  border-bottom: 1.5px solid #2E8BC0;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right:20px;
+  color: white;
+  outline: none;
+} 
 
-  #category option{
-    color: black;
-    outline: none; 
-  }
+#category option{
+  color: black;
+  outline: none; 
+}
 
+input::-webkit-input-placeholder {
+  color: white;
+}
 
-  input::-webkit-input-placeholder {
-    color: white;
-  }
+input:focus::placeholder{
+  color: transparent;
+  transition-duration: 0.4s;
+}
 
-  input:focus::placeholder{
-    color: transparent;
-    transition-duration: 0.4s;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+.button-wrapper {
+  text-align: center;
+}
 
-  .button-wrapper {
-    text-align: center;
-  }
+.addBtn {
+  margin-top: 4%;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  cursor: pointer;
+  color: white;
+  background-color:#2E8BC0;
+}
 
-  .addBtn {
-    margin-top: 4%;
-    width: fit-content;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    cursor: pointer;
-    color: white;
-    background-color:#2E8BC0;
+.delBtn {
+  margin-top: 4%;
+  margin-right: 18px;
+  width: fit-content;
+  cursor: pointer;
+  padding: 4px;
+  background-color: rgb(242 91 91);
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  cursor: pointer;
+  color: white;
+}
 
-  }
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 20px;
+  color: rgb(249 249 249);
+}
 
-  .delBtn {
-    margin-top: 4%;
-    margin-right: 18px;
-    width: fit-content;
-    cursor: pointer;
-    padding: 4px;
-    background-color: rgb(242, 91, 91);
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    cursor: pointer;
-    color: white;
-  }
-
-  h1 {
-    position: absolute;
-    top: 20px;
-    left: 80px;
-    cursor: pointer;
-    padding: 5px;
-    margin-left: 20px;
-    color:rgb(249, 249, 249);
-  }
-  
-/*
-  h2{
-    text-align: left;
-    font-size: 20px;
-    color: #ffffff;
-  } */
 .heading {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 #corner {
@@ -184,18 +174,18 @@
 
    
 #main-table {
-width: 1200px;
-border-spacing: 0;
-border-collapse: collapse;
+  width: 1200px;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 #main-table td {
-text-align: center;
-padding: 5px;
-margin: 0 auto;
-font: weight 500px;
-color: rgb(255, 255, 255);
-height: 40px;
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  font: weight 500px;
+  color: rgb(255 255 255);
+  height: 40px;
 }
 
 #main-table tr:nth-child(1) {
@@ -209,7 +199,7 @@ height: 40px;
   border: none;
   padding: 5px 12px;
   margin: 10px 0;
-  background: #368ca6;
+  background: #368CA6;
   border-radius: 5px;
   width: 80%;
   color: white;
@@ -235,8 +225,8 @@ height: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: rgb(128, 125, 125);
-  color: rgb(255, 255, 255);
+  background-color: rgb(128 125 125);
+  color: rgb(255 255 255);
   font-size: 16px;
   padding: 12px 24px;
   border: none;
@@ -247,18 +237,18 @@ height: 40px;
 .container .btn:hover {
   background-color: black;
 }
+
 #line {
-    overflow: hidden;
-    white-space: nowrap;
-    display:inline-block;
-    margin-left: 20px;
-  }
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 20px;
+}
 
 #search {
-    overflow: hidden;
-    white-space: nowrap;
-    display:inline-block;
-    
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;   
 }
 
 .search-bar{
@@ -271,7 +261,7 @@ height: 40px;
 }
 
 ::placeholder{
-  color: #ffffff;
+  color: #FFF;
 }
 
 .search-bar input {
@@ -280,7 +270,7 @@ height: 40px;
   outline: none;
   flex: 1;
   font-size: 16px;
-  color: #ffffff;
+  color: #FFF;
   padding-right: 200px;
   padding-left: 3px;
   padding-bottom: 5px;
@@ -292,7 +282,7 @@ height: 40px;
 }
 
 .sorting{
-  display:inline-block;
+  display: inline-block;
   margin-left: 20px;
   transform: translateY(-10px);
   
@@ -315,7 +305,7 @@ height: 40px;
   padding-bottom: 1.75px;
   padding-right: 15px;
   background-color: transparent;
-  color: #ffffff;
+  color: #FFF;
   font-size: 16px;
 }
 
@@ -324,40 +314,43 @@ height: 40px;
   border: 0;
   outline: none;
 }
-.form-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 1500; 
-  }
 
-  #logout {
-    width: 80px; 
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 10px;
-    border-style: none;
-    outline: white;
-    outline-width: 2px;
-    cursor: pointer;
-    font-size: 15px;
-    color: white;
-    background-color: #34cdfb;
-  }
-  #logo-bottom{
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    height: 10%;
-  }
-  #logout:hover { 
-    transform: scale(1.05);
-  }
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #F1F1F1;
+  z-index: 1500; 
+}
+
+#logout {
+  width: 80px; 
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border-style: none;
+  outline: white;
+  outline-width: 2px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background-color: #34CDFB;
+}
+
+#logo-bottom{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 10%;
+}
+
+#logout:hover { 
+  transform: scale(1.05);
+}
 
 #imagesLine {
-  position:relative;
+  position: relative;
   width: 1350px;
   height: 400px;
   right: 0px;
@@ -384,7 +377,7 @@ height: 40px;
 #main-table #names {
   top: 20px;
   height: 40px;
-  width:fit-content;
+  width: fit-content;
   color: #575F6E;
   background: #f5f4f4;
   border-bottom-left-radius: 10px;
@@ -393,31 +386,30 @@ height: 40px;
 #main-table #categorys {
   color: #575F6E;
   background: #f5f4f4;
-  width:fit-content;
+  width: fit-content;
 }  
 
 #main-table #dates {
   color: #575F6E;
-  background: #f5f4f4;
-  width:fit-content;
-
+  background: #F5F4F4;
+  width: fit-content;
 }
+
 #main-table #amounts {
   color: #575F6E;
-  background: #f5f4f4;
-  width:fit-content;
-
+  background: #F5F4F4;
+  width: fit-content;
 }
+
 #main-table #actions {
   color: #575F6E;
-  background: #f5f4f4;
-  width:fit-content;
+  background: #F5F4F4;
+  width: fit-content;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.scroll
-{
+.scroll {
   height: 500px;
   width: max-content;
   overflow-x: hidden;
