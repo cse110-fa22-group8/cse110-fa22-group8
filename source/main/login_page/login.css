@@ -10,7 +10,7 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  background: rgb(2,0,36);
+  background: rgb(2 0 36);
   background: linear-gradient(90deg, rgba(2 0 36 / 100%) 0%, rgba(76 65 199 / 100%) 0%, rgba(7 236 254 / 100%) 100%);
   background-size: cover;
 }
@@ -60,19 +60,19 @@ h2 {
 }
 
 .center form {
-  padding: 0px 35px;
+  padding: 0 35px;
   box-sizing: border-box;
 }
 
 form .login_cred {
   position: relative;
   border-bottom: 2px solid #e6e6e6;
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 
 .login_cred input {
   width: 100%;
-  padding: 0px 5px;
+  padding: 0 5px;
   height: 40px;
   font-size: 16px;
   border: none;
@@ -85,7 +85,7 @@ form .login_cred {
   position: absolute;
   top: 50%;
   left: 5px;
-  color: #E6E6E6;
+  color: #e6e6e6;
   transform: translateY(-50%);
   font-size: 18px;
   pointer-events: none;

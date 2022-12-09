@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: 500;
-  font-family: "Montserrat";
+  font-family: Montserrat, sans-serif;
 }
 
 body {
@@ -45,7 +45,7 @@ body {
   border-radius: 15px;
   border-style: solid;
   box-shadow: 0 0 1rem 0 rgba(0 0 0 / 20%);
-  padding: 3% 3% 2% 3%; 
+  padding: 3% 3% 2%;
 }
 
 #chart-close {
@@ -71,7 +71,7 @@ body {
   color: white;
 }
 
-.close-button:hover { 
+.close-button:hover {
   transform: scale(1.2);
 }
 
@@ -80,8 +80,9 @@ body {
   flex-direction: column;
 }
 
-.form-container input, select {
-  border-width: 0px 0px 2px 0px;
+.form-container input,
+select {
+  border-width: 0 0 2px;
   border-bottom: 1.5px solid #2e8bc0;
   background-color: transparent;
   margin-top: 10px;
@@ -108,7 +109,7 @@ input:focus::placeholder {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0px;
+  margin: 0;
 }
 
 .button-wrapper {
@@ -125,7 +126,6 @@ input::-webkit-inner-spin-button {
   border-style: solid;
   border-width: 2px;
   border-color: white;
-  cursor: pointer;
   color: white;
   background-color: #2e8bc0;
 }
@@ -143,7 +143,6 @@ input::-webkit-inner-spin-button {
   border-style: solid;
   border-width: 2px;
   border-color: white;
-  cursor: pointer;
   color: white;
 }
 
@@ -162,14 +161,13 @@ h1 {
 }
 
 #corner {
-  position:fixed;
-  right:10px;
-  top:5px;
+  position: fixed;
+  right: 10px;
+  top: 5px;
   cursor: pointer;
   padding: 5px;
 }
 
-   
 #main-table {
   width: 1200px;
   border-spacing: 0;
@@ -180,7 +178,7 @@ h1 {
   text-align: center;
   padding: 5px;
   margin: 0 auto;
-  font: weight 500px;
+  font-weight: 500px;
   color: rgb(255 255 255);
   height: 40px;
 }
@@ -245,11 +243,11 @@ h1 {
 #search {
   overflow: hidden;
   white-space: nowrap;
-  display: inline-block;   
+  display: inline-block;
 }
 
-.search-bar{
-  padding: 0px 0px;
+.search-bar {
+  padding: 0;
   margin-left: 20px;
   margin-bottom: 2px;
   border-bottom: 2px solid white;
@@ -257,8 +255,8 @@ h1 {
   max-width: 700px;
 }
 
-::placeholder{
-  color: #FFF;
+::placeholder {
+  color: #fff;
 }
 
 .search-bar input {
@@ -267,7 +265,7 @@ h1 {
   outline: none;
   flex: 1;
   font-size: 16px;
-  color: #FFF;
+  color: #fff;
   padding-right: 200px;
   padding-left: 3px;
   padding-bottom: 5px;
@@ -296,13 +294,13 @@ h1 {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  width:100%;
+  width: 100%;
   outline: 0;
   border-bottom: 2px solid white;
   padding-bottom: 1.75px;
   padding-right: 15px;
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -337,12 +335,12 @@ h1 {
 
 #logo-bottom {
   position: fixed;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   height: 10%;
 }
 
-#logout:hover { 
+#logout:hover {
   transform: scale(1.05);
 }
 
@@ -350,14 +348,14 @@ h1 {
   position: relative;
   width: 1350px;
   height: 400px;
-  right: 0px;
-  bottom: 0px;
-  
+  right: 0;
+  bottom: 0;
 }
+
 #logo {
   position: absolute;
   right: 120px;
-  bottom: 0px;
+  bottom: 0;
   width: fit-content;
   height: 30%;
   
@@ -365,8 +363,8 @@ h1 {
 
 #bottom {
   position: fixed;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   width: fit-content;
   height: 40%;
 }
