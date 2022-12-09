@@ -10,8 +10,8 @@ stay financially responsible. Unlike many other expense trackers, our expense tr
 - Expense Breakdowns categorizing the expense from needs, wants, and savings
 
 To see the live project, visit [Frugal](https://cse110-fa22-group8.github.io/cse110-fa22-group8/source/main/login_page/login_page.html).
-- [Private Video](https://www.youtube.com/watch?v=JglN2eMawa4)
-- [Public Video]()
+- [Public Video](https://www.youtube.com/watch?v=JglN2eMawa4)
+- [Private Video]()
 
 ## Tutorial 
 **How to stay financially responsible** 
