@@ -49,6 +49,7 @@ function searchfilter(searchVal, filterVal) {
       if (rows[i].getElementsByTagName("td")[1].innerHTML == filterVal) {
         rows[i].style.display = "table-row";
         if (count % 2 == 1) {
+          //Add blur to the row background
           rows[i].style.backdropFilter =
             "blur(3px) saturate(100%) contrast(45%) brightness(130%)";
           rows[i].style.borderRadius = "10px";
