@@ -51,6 +51,5 @@ $ npm install
 ```
 $ npm run test
 ```
-
 ## Develop locally
 Clone this repo to your local machine. For any new feature request, create an issue outlining the constraints and plan of implementation. Open a branch named from that issue/feature request and make any changes required. If using VSCode, download the live server extension and see your changes visually by right-clicking on the corresponding HTML file and starting a live server. If everything looks correct and all the unit tests pass, submit a pull request for the branch, linking it to the created issue. Two approving reviews by other developers will be required before the branch is merged into main. 
