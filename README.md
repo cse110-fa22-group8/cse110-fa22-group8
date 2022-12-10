@@ -1,7 +1,7 @@
 # Team 8 - CSE 110
 ## Original Project by Team Byte (Group 8 - CSE 110 Fall 22')
 
-Check out our [Team Page](admin/team.md)!
+Check out our [Team Page](admin/team.md)!!
 
 This project is a Expense Tracker to help others manage their expenses and
 stay financially responsible. Unlike many other expense trackers, our expense tracker provides features like:
