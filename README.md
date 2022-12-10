@@ -1,6 +1,14 @@
 # Team 8 - CSE 110
 ## Original Project by Team Byte (Group 8 - CSE 110 Fall 22')
 
+![logo](./admin/branding/LOGO.png)
+
+[![HTML Validation](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/html-validation.yml/badge.svg)](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/html-validation.yml)
+[![JSDocs](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/jsdocs.yml/badge.svg)](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/jsdocs.yml)
+[![Linter](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/linter.yml/badge.svg)](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/linter.yml)
+[![Prettier](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/prettier.yml/badge.svg)](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/prettier.yml)
+[![Unit Test](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/unit_test.yml/badge.svg)](https://github.com/cse110-fa22-group8/cse110-fa22-group8/actions/workflows/unit_test.yml)
+
 Check out our [Team Page](admin/team.md)!
 
 This project is a Expense Tracker to help others manage their expenses and
@@ -38,7 +46,6 @@ JSDocs for main are automatically generated to the link above or [here](https://
 ```
 $ npm run test
 ```
-
 
 ## Linting & Validation
 To check javascript linting using eslint, run:
