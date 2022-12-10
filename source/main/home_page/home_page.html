@@ -19,19 +19,19 @@
 </head>
 <body style="overflow-y: auto;">
     <div id = "line">
-        <img src="../assets/Logos/Logo (light).png" width= "75" height="75" alt="logo">
+        <img src="../assets/Logos/Logo_(light).png" width= "75" height="75" alt="logo">
         <h1> My Frugal Dashboard </h1>
     </div>
     <div id='corner'>
         <button id="logout">Log Out</button>
     </div>
     <br>
-    <input type="image" src="../assets/images/add.png" width ='200 px' height = '40 px' name="saveForm"  id="add-row" alt="logo"/>
-    <input type="image" src="../assets/images/Group Pie.png" width ='50 px' height = '50 px' name="openChart" id="chart" alt="pie"/>
+    <input type="image" src="../assets/images/add.png" width ="200" height = "40" name="saveForm"  id="add-row" alt="logo"/>
+    <input type="image" src="../assets/images/Group_Pie.png" width ="50" height = "50" name="openChart" id="chart" alt="pie"/>
     <div id  = "search">
         <div class = "search-bar">
-            <input type = "text" placeholder = "Search " name = 'e'>
-            <img src = "../assets/images/Icon.png"  width ='30 px' height = '30 px' alt = "">
+            <input type = "text" placeholder = "Search" name = 'e'>
+            <img src = "../assets/images/Icon.png"  width ="18" height = "18" alt = "">
         </div>
        
     </div>
@@ -46,66 +46,68 @@
             </select> 
         </div> 
     </div>
-
-    <div class="form-popup" id="breakdown">
+    
+    <div class="breakdown-popup" id="breakdown">
         <button id="chart-close" aria-label="Close alert" type="button" onclick="closeChart()">
             <span aria-hidden="true">&times;</span>
         </button>
         <canvas id="piechart" style="width:100%;max-width:800px"></canvas>
     </div>
 
-    <div class="form-popup" id="expense">
+    <div class="expense-popup" id="expense">
         <form class="form-container">
-             <button class="close-button" aria-label="Close alert" type="button" onclick="closeForm()">
+                <button class="close-button" aria-label="Close alert" type="button" onclick="closeForm()">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="row-1">
-                <input type="text" id="name" placeholder="Item Name" size="20" style="height:25px;font-size:14pt;">
+                <input type="text" id="name" placeholder="Expense Name" style="height:25px;font-size:14pt;">
                 <select id="category" name="expensetype" style="height:25px;font-size:14pt;">
-                    <option value="" disabled selected hidden>Choose a Category</option>
+                    <option value="" disabled selected hidden>Choose a category</option>
                     <option value="Wants">Wants</option>
                     <option value="Needs">Needs</option>
                     <option value="Savings">Savings</option>
                 </select>
             </div>
             <div class="row-2">
-                <input type="number" id="amount" placeholder="$ Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
+                <label style="height:25px;font-size:14pt;color:white;">$</label>
+                <input type="number" id="amount" placeholder="Amount" style="height:25px;font-size:14pt;width: 203px;" min="0" oninput="this.value = 
                     !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null">
-                <input type="date" id="date" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+                <input type="date" id="date" style="height:25px;font-size:14pt;width: 198px;">
                 
             </div>
             <div class="button-wrapper">
-                <button type="submit" class="addBtn" id="adding">Add Expense</button>
+                <button type="submit" class="addition" id="adding">Add Expense</button>
             </div>
 
         </form>
     </div>
+    
 
 
-    <div class="form-popup" id="update">
+    <div class="update-popup" id="update">
         <form class="form-container">     
 					<button class="close-button" aria-label="Close alert" type="button" onclick="closeUpdate()">
 						<span aria-hidden="true">&times;</span>
 					</button>
-          <label for="expense"><b>Expense: </b></label>
+          <label for="name_update" style="color: #2E8BC0; font-size: 18px;"><b>Expense Name</b></label>
           <input type="text" id="name_update" placeholder="Item" size="20" style="height:25px;font-size:14pt;">
 
-          <label for="amount"><b>Value: </b></label>
-          <input type="number" id="amount_update" placeholder="Amount" size="20" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
+          <label for="amount_update" style="color: #2E8BC0; font-size: 18px;"><b>Amount</b></label>
+          <input type="number" id="amount_update" placeholder="Amount" style="height:25px;font-size:14pt;" min="0" oninput="this.value = 
           !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null" step="0.01">
 
-          <label for="category"><b>Category:</b></label>
+          <label for="category_update" style="color: #2E8BC0; font-size: 18px;"><b>Category</b></label>
           <select id="category_update" name="expensetype" style="height:25px;font-size:14pt;">
             <option value="Wants">Wants</option>
             <option value="Needs">Needs</option>
             <option value="Savings">Savings</option>
             </select>
 
-          <label for=" date"><b>Date:</b></label>
-          <input type="date" id="date_update" placeholder="mm/dd/yyyy" size="20" style="height:25px;font-size:14pt;">
+          <label for="date_update" style="color: #2E8BC0; font-size: 18px;"><b>Date</b></label>
+          <input type="date" id="date_update" size="20" style="height:25px;font-size:14pt;">
                     <div class="button-wrapper">
-                        <button type="submit" class="addBtn" id="updating">Update Expense</button>
-                        <button type="submit" class="delBtn" id="deleting">Delete</button>
+                        <button type="submit" class="addition" id="updating">Update Expense</button>
+                        <button type="submit" class="deletion" id="deleting">Delete</button>
                     </div>
           
         </form>
@@ -113,7 +115,7 @@
 
       <div id="table-container">
         <div class = "scroll">
-            <table id="main-table" cellspacing="0">
+            <table id="main-table">
                     <tr id = "header">
                         <td id="names">Expense Name</td>
                         <td id="categorys">Category</td>
@@ -124,26 +126,32 @@
             </table>
         </div>  
     </div>
-    <!-- <div id = imagesLine>
-        <img src="../assets/images/Waves.png" id="bottom" alt="logo">
-        <img src="../assets/Logos/byte.png" id="logo-bottom" alt="logo"> 
-    </div> -->
-
-</body>
-<script src="homePage.js"></script>
-<script>
-    if (user == null){
-        alert("Unauthenticated User... Plz Login")
-        window.location.replace("../login_page/login_page.html")
-
-    }
-
-
-    let expenses = JSON.parse(localStorage.getItem(user));
-    if (expenses != null){ //if not null, we have at least one expense
-        for (let i = 0; i < expenses.length; i++) {
-            addRow(expenses[i].name, expenses[i].category, expenses[i].value, expenses[i].date);
+    
+    <script src="homePage.js"></script>
+    <script>
+        if (user == null){
+            alert("Unauthenticated User... Plz Login")
+            window.location.replace("../login_page/login_page.html")
+    
         }
-    }
-</script>
+    
+    
+        let expenses = JSON.parse(localStorage.getItem(user));
+        if (expenses != null){ //if not null, we have at least one expense
+            for (let i = 0; i < expenses.length; i++) {
+                addRow(expenses[i].name, expenses[i].category, expenses[i].value, expenses[i].date);
+            }
+        }
+    
+        rows = document.querySelector("#main-table").getElementsByTagName("tr"); 
+        for (let i = 1; i < rows.length; i++){
+            if(i % 2 == 0){
+                rows[i].style.backdropFilter = 'blur(3px) saturate(100%) contrast(45%) brightness(130%)'
+                rows[i].style.borderRadius = '10px'
+            }
+        }
+    
+    </script>
+</body>
+
 </html>

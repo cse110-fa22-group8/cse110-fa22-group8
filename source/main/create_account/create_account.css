@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "https://fonts.googleapis.com/css?family=Montserrat";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,65,199,1) 0%, rgba(7,236,254,1) 100%);
+  background: rgb(2 0 36);
+  background: linear-gradient(90deg, rgba(2 0 36 / 100%) 0%, rgba(76 65 199 / 100%) 0%, rgba(7 236 254 / 100%) 100%);
   background-size: cover;
 }
 
 /* white modal */
-.main_content {
+.registration-form {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -26,18 +26,18 @@ body{
   left: 50%;
   max-width: fit-content;
   transform: translate(-50%, -50%);
-  backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);    
+  backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);
   border-width: 1px;
   border-color: #fff;
   border-radius: 15px;
   border-style: solid;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem 0 rgba(0 0 0 / 20%);
   padding-top: 2%;
   padding-bottom: 3%;
 }
 
 /* logo */
-.main_content img[src="../assets/Logos/logo-dark.png"] {
+.registration-form img[src="../assets/Logos/logo-dark.png"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -46,23 +46,22 @@ body{
   filter: brightness(100%);
 }
 
-.main_content h2 {
+.registration-form h2 {
   text-align: center;
   margin-top: 3%;
   margin-bottom: 5%;
-  font-family: 'Montserrat';
+  font-family: Montserrat, sans-serif;
   font-size: 30px;
   color: white;
 }
 
-.create_account_form {
+.registration {
   display: flex;
   flex-direction: column;
-
 }
 
 /* input styling */
-.form_input {
+.register {
   margin: auto;
   display: block;
   color: white;
@@ -70,25 +69,25 @@ body{
   height: 40px;
   border: none;
   outline: none;
-  background: rgba(18, 169, 202, 0.5);
+  background: rgba(18 169 202 / 50%);
   border-radius: 5px;
   margin-bottom: 3%;
   text-indent: 20px;
   font-size: 16px;
-  font-family: 'Montserrat';
+  font-family: Montserrat, sans-serif;
 }
 
-.form_input:hover {
-  background: rgba(18, 169, 202, 0.4);
+.register:hover {
+  background: rgba(18  169  202 / 40%);
 }
 
 ::placeholder {
   color: whitesmoke;
-  font-family: 'Montserrat';
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
 }
 
-input:focus::placeholder{
+input:focus::placeholder {
   color: transparent;
   transition-duration: 0.4s;
 }
@@ -103,7 +102,7 @@ button {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: Montserrat, sans-serif;
   font-size: 16px;
 }
 
@@ -111,7 +110,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-.createBtn {
+.submission {
   color: white;
-  background-color: #0f72b3;;
+  background-color: #0f72b3;
 }
