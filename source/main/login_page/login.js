@@ -16,7 +16,7 @@ submit.addEventListener("click", check);
  * else, displays an alert that says the user does not exist.
  */
 function check(){
-  let name = document.getElementById('username');
+  let name =document.getElementById('username');
   let pw = document.getElementById('password');
   let users = localStorage.getItem('users') ? new Map(JSON.parse(localStorage.getItem('users'))) : new Map()
   if(users.has(name.value)){
