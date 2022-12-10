@@ -40,7 +40,7 @@ function searchfilter(searchVal, filterVal){
         rows[i].style.borderRadius = '0px'
     }
     let count = 0;
-    for(let i=1; i< rows.length; i++){
+    for(let i=1; i<rows.length; i++){
         if(rows[i].getElementsByTagName('td')[0].innerHTML.includes(searchVal)){
             if(rows[i].getElementsByTagName('td')[1].innerHTML == filterVal){
                 rows[i].style.display = 'table-row';
@@ -61,14 +61,11 @@ function searchfilter(searchVal, filterVal){
             else{
                 rows[i].style.display = 'none';
             }
-
         }
         else {
             rows[i].style.display = 'none';
         }
-
     }
-
 }
 
 
