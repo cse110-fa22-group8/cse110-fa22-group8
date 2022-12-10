@@ -34,7 +34,7 @@ a.addEventListener('change', function() {
  */
 function searchfilter(searchVal, filterVal){
     rows = document.querySelector("#main-table").getElementsByTagName("tr");
-    for(let i=1; i< rows.length; i++){
+    for(let i=1; i<rows.length; i++){
         rows[i].style.display = 'table-row';
     }
     for(let i=1; i< rows.length; i++){
