@@ -12,8 +12,7 @@ describe("Create account test cases", () => {
     "file://" + process.cwd() + "/source/main/login_page/login_page.html";
   const userNameSelect = "div.frugal-Account input[name='username']";
   const userPassSelect = "div.frugal-Account input[name='password']";
-  const userPassRepeat =
-    "div.frugal-Account input[name='repeat_password']";
+  const userPassRepeat = "div.frugal-Account input[name='repeat_password']";
 
   var alertMsg;
   // go to webpage
