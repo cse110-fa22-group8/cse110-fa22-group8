@@ -10,8 +10,8 @@ describe("login page test cases", () => {
     "file://" + process.cwd() + "/source/main/home_page/home_page.html";
   const username = "puppeteer_here",
     password = "Password123";
-  const userNameSelect = "div.localStorageLogin input[id='username']";
-  const userPassSelect = "div.localStorageLogin input[id='password']";
+  const userNameSelect = "div.data-Submission input[id='username']";
+  const userPassSelect = "div.data-Submission input[id='password']";
 
   // go to webpage
   beforeAll(async () => {

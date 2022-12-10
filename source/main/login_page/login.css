@@ -40,7 +40,7 @@ h2 {
 }
 
 /* logo */
-.frugalLogo {
+.dark-Frugimg {
   max-width: 5%;
   max-height: 5%;
   display: block;
@@ -64,13 +64,13 @@ h2 {
   box-sizing: border-box;
 }
 
-form .localStorageLogin {
+form .data-Submission {
   position: relative;
   border-bottom: 2px solid #e6e6e6;
   margin: 30px 0;
 }
 
-.localStorageLogin input {
+.data-Submission input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -81,7 +81,7 @@ form .localStorageLogin {
   color: white;
 }
 
-.localStorageLogin label {
+.data-Submission label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -92,7 +92,7 @@ form .localStorageLogin {
   transition: 0.5s;
 }
 
-.localStorageLogin span::before {
+.data-Submission span::before {
   content: "";
   position: absolute;
   top: 40px;
@@ -103,14 +103,14 @@ form .localStorageLogin {
   transition: 0.5s;
 }
 
-.localStorageLogin input:focus ~ label,
-.localStorageLogin input:valid ~ label {
+.data-Submission input:focus ~ label,
+.data-Submission input:valid ~ label {
   top: -5px;
   color: #fff;
 }
 
-.localStorageLogin input:focus ~ span::before,
-.localStorageLogin input:valid ~ span::before {
+.data-Submission input:focus ~ span::before,
+.data-Submission input:valid ~ span::before {
   width: 100%;
 }
 
