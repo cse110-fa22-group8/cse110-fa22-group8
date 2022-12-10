@@ -101,7 +101,7 @@ select {
   outline: none;
 }
 
-input::-webkit-input-placeholder {
+input::placeholder {
   color: white;
 }
 
@@ -112,7 +112,7 @@ input:focus::placeholder {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -120,7 +120,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.addBtn {
+.expenseBtn {
   margin-top: 4%;
   width: fit-content;
   cursor: pointer;
@@ -134,7 +134,7 @@ input::-webkit-inner-spin-button {
   background-color: #2e8bc0;
 }
 
-.delBtn {
+.removingBtn {
   margin-top: 4%;
   margin-right: 18px;
   width: fit-content;
@@ -227,7 +227,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: rgb(128 125 125);
   color: rgb(255 255 255);
   font-size: 16px;
@@ -289,7 +288,7 @@ h1 {
   width: 100%;
 }
 
-.sorting-search{
+.sorting-search {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
@@ -315,11 +314,11 @@ h1 {
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 1500; 
+  z-index: 1500;
 }
 
 #logout {
-  width: 80px; 
+  width: 80px;
   height: 35px;
   margin-left: 10px;
   border-radius: 10px;
@@ -357,7 +356,6 @@ h1 {
   bottom: 0;
   width: fit-content;
   height: 30%;
-  
 }
 
 #bottom {
