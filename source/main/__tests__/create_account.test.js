@@ -10,10 +10,10 @@ describe("Create account test cases", () => {
     "/source/main/create_account/create_account.html";
   const loginUrl =
     "file://" + process.cwd() + "/source/main/login_page/login_page.html";
-  const userNameSelect = "div.create_account_form input[name='username']";
-  const userPassSelect = "div.create_account_form input[name='password']";
+  const userNameSelect = "div.frugal-Account input[name='username']";
+  const userPassSelect = "div.frugal-Account input[name='password']";
   const userPassRepeat =
-    "div.create_account_form input[name='repeat_password']";
+    "div.frugal-Account input[name='repeat_password']";
 
   var alertMsg;
   // go to webpage
