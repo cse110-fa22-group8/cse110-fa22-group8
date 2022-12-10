@@ -40,7 +40,7 @@ h2 {
 }
 
 /* logo */
-.dark-Frugimg {
+.dark-frugimg {
   max-width: 5%;
   max-height: 5%;
   display: block;
@@ -64,13 +64,13 @@ h2 {
   box-sizing: border-box;
 }
 
-form .data-Submission {
+form .data-submission {
   position: relative;
   border-bottom: 2px solid #e6e6e6;
   margin: 30px 0;
 }
 
-.data-Submission input {
+.data-submission input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -81,7 +81,7 @@ form .data-Submission {
   color: white;
 }
 
-.data-Submission label {
+.data-submission label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -92,7 +92,7 @@ form .data-Submission {
   transition: 0.5s;
 }
 
-.data-Submission span::before {
+.data-submission span::before {
   content: "";
   position: absolute;
   top: 40px;
@@ -103,14 +103,14 @@ form .data-Submission {
   transition: 0.5s;
 }
 
-.data-Submission input:focus ~ label,
-.data-Submission input:valid ~ label {
+.data-submission input:focus ~ label,
+.data-submission input:valid ~ label {
   top: -5px;
   color: #fff;
 }
 
-.data-Submission input:focus ~ span::before,
-.data-Submission input:valid ~ span::before {
+.data-submission input:focus ~ span::before,
+.data-submission input:valid ~ span::before {
   width: 100%;
 }
 
