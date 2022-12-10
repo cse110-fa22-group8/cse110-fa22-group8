@@ -5,8 +5,8 @@ const loginPageUrl =
   "file://" + process.cwd() + "/source/main/login_page/login_page.html";
 const username = "puppeteer_here";
 const password = "Password123";
-const userNameSelect = "div.registration input[id='username']";
-const userPassSelect = "div.registration input[id='password']";
+const userNameSelect = "div.data-submission input[id='username']";
+const userPassSelect = "div.data-submission input[id='password']";
 const expenseSelect = "input[id='name']";
 
 describe("Test cases for the home page", () => {
