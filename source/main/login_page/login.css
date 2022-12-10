@@ -40,7 +40,7 @@ h2 {
 }
 
 /* logo */
-.Frugal-Logo {
+.imageLogin {
   max-width: 5%;
   max-height: 5%;
   display: block;
@@ -64,13 +64,13 @@ h2 {
   box-sizing: border-box;
 }
 
-form .submission-login {
+form .login_cred {
   position: relative;
   border-bottom: 2px solid #e6e6e6;
   margin: 30px 0;
 }
 
-.submission-login input {
+.login_cred input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -81,7 +81,7 @@ form .submission-login {
   color: white;
 }
 
-.submission-login label {
+.login_cred label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -92,7 +92,7 @@ form .submission-login {
   transition: 0.5s;
 }
 
-.submission-login span::before {
+.login_cred span::before {
   content: "";
   position: absolute;
   top: 40px;
@@ -103,14 +103,14 @@ form .submission-login {
   transition: 0.5s;
 }
 
-.submission-login input:focus ~ label,
-.submission-login input:valid ~ label {
+.login_cred input:focus ~ label,
+.login_cred input:valid ~ label {
   top: -5px;
   color: #fff;
 }
 
-.submission-login input:focus ~ span::before,
-.submission-login input:valid ~ span::before {
+.login_cred input:focus ~ span::before,
+.login_cred input:valid ~ span::before {
   width: 100%;
 }
 
