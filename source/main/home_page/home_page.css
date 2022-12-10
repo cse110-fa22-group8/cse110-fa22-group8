@@ -120,7 +120,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.expenseBtn {
+.addition {
   margin-top: 4%;
   width: fit-content;
   cursor: pointer;
@@ -134,7 +134,7 @@ input::-webkit-inner-spin-button {
   background-color: #2e8bc0;
 }
 
-.removingBtn {
+.deletion {
   margin-top: 4%;
   margin-right: 18px;
   width: fit-content;
@@ -340,14 +340,6 @@ h1 {
 
 #logout:hover {
   transform: scale(1.05);
-}
-
-#imagesLine {
-  position: relative;
-  width: 1350px;
-  height: 400px;
-  right: 0;
-  bottom: 0;
 }
 
 #logo {

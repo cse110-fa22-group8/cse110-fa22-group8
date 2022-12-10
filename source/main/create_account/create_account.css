@@ -55,7 +55,7 @@ body {
   color: white;
 }
 
-.frugal-Account {
+.accountStorage {
   display: flex;
   flex-direction: column;
 }
@@ -110,7 +110,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-.submit_Signin {
+.submission {
   color: white;
   background-color: #0f72b3;
 }
