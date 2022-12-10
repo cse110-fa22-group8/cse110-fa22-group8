@@ -19,7 +19,7 @@ stay financially responsible. Unlike many other expense trackers, our expense tr
 
 To see the live project, visit [Frugal](https://cse110-fa22-group8.github.io/cse110-fa22-group8/source/main/login_page/login_page.html).
 - [Public Video](https://www.youtube.com/watch?v=JglN2eMawa4)
-- [Private Video]()
+- [Private Video](https://www.youtube.com/watch?v=3SyrrjbM7w8)
 
 ## Frugal Overview 
 **How to stay financially responsible** 
